@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Learn to Code 2026</h1>
+    <h3>Registration Form</h3>
+    <p>Organized by Department of Computer Science</p>
+</header>
+
+<section>
+    <h2>Event Information</h2>
+    <p><b>Date:</b> 15 March 2026</p>
+    <p><b>Time:</b> 9:30 AM – 3:30 PM</p>
+    <p><b>Venue:</b> Seminar Hall, The Quaide Milleth College For Men</p>
+    <p>This learning path introduces to students HTML, CSS, and JavaScript.</p>
+</section>
+
+<section>
+    <form id="registrationForm">
+        <h2>Personal Details</h2>
+
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" id="name" required>
+            <div class="error-message" id="name-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth:</label>
+            <input type="date" id="dob" required>
+            <div class="error-message" id="dob-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" id="email" required>
+            <div class="error-message" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number:</label>
+            <input type="tel" id="phone" required>
+            <div class="error-message" id="phone-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <select id="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <div class="error-message" id="gender-error"></div>
+        </div>
+    </form>
+</section>
+
+<section>
+    <form id="registrationForm2">
+        <h2>Academic Details</h2>
+
+        <div class="form-group">
+            <label>College/Company:</label>
+            <input type="text" id="college" required>
+            <div class="error-message" id="college-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Course:</label>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option>B.Sc</option>
+                <option>BCA</option>
+                <option>B.Com</option>
+                <option>B.E</option>
+                <option>B.A</option>
+            </select>
+            <div class="error-message" id="course-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Year of Study:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="year" value="1st Year"> 1st Year</label>
+                <label><input type="radio" name="year" value="2nd Year"> 2nd Year</label>
+                <label><input type="radio" name="year" value="3rd Year"> 3rd Year</label>
+            </div>
+            <div class="error-message" id="year-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Event Selection:</label>
+            <select id="event" required>
+                <option value="">Select Event</option>
+                <option value="HTML Workshop">HTML Workshop</option>
+                <option value="CSS Styling">CSS Styling</option>
+                <option value="JavaScript Basics">JavaScript Basics</option>
+            </select>
+            <div class="error-message" id="event-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Mode of Participation:</label>
+            <select id="mode" required>
+                <option value="">Select Mode</option>
+                <option value="Online">Online</option>
+                <option value="Offline">Offline</option>
+            </select>
+            <div class="error-message" id="mode-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Session:</label>
+            <select id="session">
+                <option>Morning</option>
+                <option>Afternoon</option>
+            </select>
+        </div>
+    </form>
+</section>
+
+<section>
+    <form id="registrationForm3">
+        <h2>Additional Information</h2>
+
+        <div class="form-group">
+            <label>Upload Resume:</label>
+            <input type="file" id="resume">
+        </div>
+
+        <div class="form-group">
+            <label>Comments:</label>
+            <textarea id="comments" rows="4" placeholder="Any special requirements..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="confirm">
+            <label for="confirm">I confirm that the above details are correct.</label>
+            <div class="error-message" id="confirm-error"></div>
+        </div>
+
+        <br>
+        <button type="submit">Register Now</button>
+        <button type="button" onclick="resetForm()">Reset Form</button>
+    </form>
+
+    <div class="success-message" id="success-message">Registration Successful!</div>
+</section>
+
+<section>
+    <h2>Registered Participants</h2>
+    <div class="counter" id="participant-counter">Total Participants: 2</div>
+    <table id="participantsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Event</th>
+                <th>Mode</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nandhini</td>
+                <td>nandhinibbsc@email.com</td>
+                <td>9360639831</td>
+                <td>HTML Workshop</td>
+                <td>Online</td>
+                <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Mohammedjiyauhuq</td>
+                <td>mohammedjiyaulhuqbsc@email.com</td>
+                <td>98765147365</td>
+                <td>CSS Styling</td>
+                <td>Offline</td>
+                <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>Contact Email: events@qmcmcollege.edu</p>
+    <p>Help Desk: +91 94444 12345</p>
+    <p>Support Timing: 9:00AM-4:30PM</p>
+    <p>© 2026 Department of Computer Science, The Quaide Milleth College For Men</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
