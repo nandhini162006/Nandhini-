@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(#008000,#ffff00);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header h2 {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+header h3{
+    margin: 5px 0;
+    font-weight: normal;
+    text-decoration: ;
+    font-weight: 700;
+    font-style: italic;           
+    font-family: "Times New Roman", serif; 
+}
+
+section {
+    padding: 25px;
+    margin: 25px;
+    background-color: white;
+    border-radius: 17px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+section h2 {
+    color: #000000;
+    border-bottom: 2px solid #00801c;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0d47a1;
+    box-shadow: 0 0 10px #008000;
+    outline: none;
+}
+
+input.error {
+    border-color: #d32f2f;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+    background-color: #ffebee;
+}
+
+input.valid {
+    border-color: #388e3c;
+    box-shadow: 0 0 5px rgba(56, 142, 60, 0.3);
+    background-color: #e8f5e8;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(#008000,#ffff00);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.success-message {
+    background: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th {
+    background: linear-gradient(#008000,#ffff00);
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #bbdefb;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+
+.counter {
+    background: #008000;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
